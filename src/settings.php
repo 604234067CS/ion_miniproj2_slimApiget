@@ -18,7 +18,7 @@ return [
          // Database connection settings           
           "db" => [
             "host" => "localhost",
-            "dbname" => "mini",
+            "dbname" => "listroon",
             "user" => "root",
             "pass" => ""
         ],
