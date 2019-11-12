@@ -142,6 +142,7 @@ $app->get('/dorm', function ($request, $response, $args) {
    $member = $sth->fetchAll();
    return $this->response->withJson($member);
 });
+
 $app->get('/search/[{query}]', function ($request, $response, $args) {
     $sth = $this->db->prepare("SELECT * FROM rentedroom WHERE name_ren LIKE :query ORDER BY name_ren");
    $query = "%".$args['query']."%";
@@ -150,3 +151,5 @@ $app->get('/search/[{query}]', function ($request, $response, $args) {
    $todos = $sth->fetchAll();
    return $this->response->withJson($todos);
 });
+
+
